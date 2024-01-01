@@ -1,6 +1,21 @@
+.welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 95%;
+  }
+  
+  .welcome p {
+    font-size: 20px;
+  }
+
 #logo {
-    animation: fill 0.5s ease forwards 2s;
+    animation: fill 0.7s ease forwards 3s;
     margin-bottom: 50px;
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 832px) {
@@ -13,43 +28,43 @@
 #logo path:nth-child(1) {
   stroke-dasharray: 602.23px;
   stroke-dashoffset: 602.23px;
-  animation: line-animation 1.8s ease forwards 0.5s;
+  animation: line-animation 2s ease forwards 1.9s;
 }
 
 #logo path:nth-child(2) {
     stroke-dasharray:811.97px;
     stroke-dashoffset: 811.97px;
-    animation: line-animation 2s ease forwards 0.3s;
+    animation: line-animation 2s ease forwards 1.5s;
 }
 
 #logo path:nth-child(3) {
     stroke-dasharray: 567.32px;
     stroke-dashoffset: 567.32px;
-    animation: line-animation 1.9s ease forwards 0.4s;
+    animation: line-animation 2s ease forwards 1.2s;
 }
 
 #logo path:nth-child(4) {
     stroke-dasharray: 561.63px;
     stroke-dashoffset: 561.63px;
-    animation: line-animation 2.1s ease forwards 0.3s;
+    animation: line-animation 2s ease forwards 1.4s;
 }
 
 #logo path:nth-child(5) {
     stroke-dasharray: 392.16px;
     stroke-dashoffset: 392.16px;
-    animation: line-animation 1.9s ease forwards 0.4s;
+    animation: line-animation 2s ease forwards 1.7s;
 }
 
 #logo path:nth-child(6) {
     stroke-dasharray: 602.22px;
     stroke-dashoffset: 602.22px;
-    animation: line-animation 2.2s ease forwards 0.3s;
+    animation: line-animation 2s ease forwards 1.3s;
 }
 
 #logo path:nth-child(7) {
     stroke-dasharray: 835.42px;
     stroke-dashoffset: 835.42px;
-    animation: line-animation 1.7s ease forwards 0.6s;
+    animation: line-animation 2s ease forwards 1.4s;
 }
 
 @keyframes line-animation {
