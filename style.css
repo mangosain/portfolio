@@ -58,7 +58,7 @@ canvas {
   height: 500px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 832px) {
   .overflow-sm-hidden {
     overflow: hidden;
   }
