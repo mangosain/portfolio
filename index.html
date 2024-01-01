@@ -11,6 +11,7 @@
   <title></title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./welcome.css">
+  <link rel="stylesheet" href="./portfolio.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom">
@@ -22,13 +23,13 @@
       <!-- Social Media Icons (Left) -->
       <ul class="navbar-nav" id="social-icons">
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
+          <a class="nav-link" href="#"><i class="fab fa-linkedin"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="nav-link" href="#"><i class="fab fa-github"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#"><i class="fab fa-steam"></i></a>
         </li>
       </ul>
 
@@ -36,26 +37,26 @@
         <!-- Navigation Items (Center) -->
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#main-content">Home</a>
+            <a class="nav-link" href="#landing">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about-me">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
 
         <!-- Download Button (Right) -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link btn btn-primary" href="#">Download</a>
+            <a class="nav-link btn btn-primary" href="#" style="color: white;">Resume &nbsp; <i class="fa-solid fa-download"></i></a>
           </li>
         </ul>
       </div>
@@ -63,7 +64,7 @@
   </nav>
 
 
-  <div class="landing">
+  <div id="landing">
     <div class="welcome">
       <svg width="819" height="127" viewBox="0 0 819 127" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
         <path d="M734.689 120V122.5H737.189H813.859H816.359V120V100.223V97.723H813.859H763.676V75.6335H809.705H812.205V73.1335V53.3565V50.8565H809.705H763.676V28.8224H813.638H816.138V26.3224V6.54544V4.04544H813.638H737.189H734.689V6.54544V120Z" stroke="white" stroke-width="5"/>
@@ -82,11 +83,14 @@
   
   
   <!-- About Section -->
-  <div class="about-me container my-5 px-1 py-5 overflow-sm-hidden">
+  <div class="container my-5 px-1 py-5 overflow-sm-hidden" id="about-me">
     <div class="row">
         <div class="col-md-6 text-justify">
             <h1 class="display-5" data-aos="fade-down">Hello! I am<br><span class="display-1">Manav Gosain</span></h1>
-            <p class="lead" data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus quis aut possimus rerum obcaecati suscipit sunt id, rem earum, ipsum distinctio nulla excepturi inventore officia reprehenderit delectus ut! Vitae, modi? Quo, adipisci, ipsam, quis maxime autem animi consequuntur voluptate laudantium ea ipsum eum placeat officiis neque consectetur assumenda incidunt.</p>
+            <div data-aos="fade-right">
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus quis aut possimus rerum obcaecati suscipit sunt id, rem earum, ipsum distinctio nulla excepturi inventore officia reprehenderit delectus ut! Vitae, modi? Quo, adipisci, ipsam, quis maxime autem animi consequuntur voluptate laudantium ea ipsum eum placeat officiis neque consectetur assumenda incidunt.</p>
+              <button class="btn btn-primary">Know more &nbsp; <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
         <div class="col-md-6 d-flex">
             <img src="./src/img/about-img.jpg" alt="" data-aos="fade-left">
@@ -94,6 +98,122 @@
     </div>
   </div>
 
+  <div class="container py-5 my-5" id="portfolio">
+    <h1 class="display-4 my-5" data-aos="zoom-in">Projects</h1>
+      
+    <section>
+      <div class="container">
+          <div class="row no-gutters">
+              <div class="filtering col-sm-12 text-center">
+                  <span data-filter="*" class="active" data-aos="fade-down">All</span>
+                  <span data-filter=".web" class="" data-aos="fade-down" data-aos-delay="100">Web</span>
+                  <span data-filter=".mobile" class="" data-aos="fade-down" data-aos-delay="200">Mobile</span>
+                  <span data-filter=".misc" class="" data-aos="fade-down" data-aos-delay="300">Miscellaneous</span>
+              </div>
+              <div class="col-12 text-center w-100">
+                  <div class="form-row gallery">
+                      <div class="col-sm-6 col-lg-4 mb-2 web">
+                          <div class="portfolio-wrapper">
+                              <div class="portfolio-image">
+                                  <img src="https://www.bootdey.com/image/350x350/FFB6C1/000000" alt="..." />
+                              </div>
+                              <div class="portfolio-overlay">
+                                  <div class="portfolio-content">
+                                      <a class="popimg ml-0" href="#">
+                                          <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                      </a>
+                                      <h4>Stiles - Ecommerce Website</h4>
+                                      <p>[Web | ReactJS]</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4 mb-2 decor mobile">
+                          <div class="portfolio-wrapper">
+                              <div class="portfolio-image">
+                                  <img src="https://www.bootdey.com/image/350x350/87CEFA/000000" alt="..." />
+                              </div>
+                              <div class="portfolio-overlay">
+                                  <div class="portfolio-content">
+                                      <a class="popimg ml-0" href="#">
+                                          <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                      </a>
+                                      <h4>CRUD Operations</h4>
+                                      <p>[Mobile | Flutter & Dart]</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4 mb-2 web">
+                          <div class="portfolio-wrapper">
+                              <div class="portfolio-image">
+                                  <img src="https://www.bootdey.com/image/350x350/C71585/000000" alt="..." />
+                              </div>
+                              <div class="portfolio-overlay">
+                                  <div class="portfolio-content">
+                                      <a class="popimg ml-0" href="#">
+                                          <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                      </a>
+                                      <h4>Signovatio - Landing Page</h4>
+                                      <p>[Web | Bootstrap]</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4 mb-2 mb-lg-0 web">
+                          <div class="portfolio-wrapper">
+                              <div class="portfolio-image">
+                                  <img src="https://www.bootdey.com/image/350x350/20B2AA/000000" alt="..." />
+                              </div>
+                              <div class="portfolio-overlay">
+                                  <div class="portfolio-content">
+                                      <a class="popimg ml-0" href="#">
+                                          <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                      </a>
+                                      <h4>Invoice Generator</h4>
+                                      <p>[Web | ReactJS]</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4 mb-2 mb-sm-0 misc">
+                          <div class="portfolio-wrapper">
+                              <div class="portfolio-image">
+                                  <img src="https://www.bootdey.com/image/350x350/FFA07A/000000" alt="..." />
+                              </div>
+                              <div class="portfolio-overlay">
+                                  <div class="portfolio-content">
+                                      <a class="popimg ml-0" href="#">
+                                          <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                      </a>
+                                      <h4>PCOS Predicition</h4>
+                                      <p>[Machine Learning | Python]</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4 misc">
+                          <div class="portfolio-wrapper">
+                              <div class="portfolio-image">
+                                  <img src="https://www.bootdey.com/image/350x350/9932CC/000000" alt="..." />
+                              </div>
+                              <div class="portfolio-overlay">
+                                  <div class="portfolio-content">
+                                      <a class="popimg ml-0" href="#">
+                                          <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                      </a>
+                                      <h4>Realtime Sign Language Recognition System</h4>
+                                      <p>[Machine Learning | Python]</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </div>
 
 
   <!-- Include Bootstrap and other scripts at the end for better performance -->
@@ -102,12 +222,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="./script.js"></script>
   <script>
     AOS.init({
       duration: 2000,
       once: true,
     });
+    
   </script>
 </body>
 </html>
