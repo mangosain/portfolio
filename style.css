@@ -65,7 +65,6 @@ canvas {
 
   #about-me img {
     height: 400px;
-    margin-left: none;
-    margin: 25px auto;
+    margin: 25px auto 0px auto;
   }
 }
