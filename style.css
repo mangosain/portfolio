@@ -62,4 +62,9 @@ canvas {
   .overflow-sm-hidden {
     overflow: hidden;
   }
+
+  .about-me img {
+    height: 300px;
+    margin: auto;
+  }
 }
