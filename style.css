@@ -57,3 +57,9 @@ canvas {
   margin-left: auto;
   height: 500px;
 }
+
+@media (max-width: 576px) {
+  .overflow-sm-hidden {
+    overflow: hidden;
+  }
+}
