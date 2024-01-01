@@ -52,3 +52,8 @@ canvas {
   height: 100vh;  
 }
 
+.about-me img {
+  border-radius: 20px;
+  margin-left: auto;
+  height: 500px;
+}
