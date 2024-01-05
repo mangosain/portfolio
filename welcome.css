@@ -6,11 +6,12 @@
     text-align: center;
     color: white;
     width: 95%;
-  }
-  
-  .welcome p {
+}
+
+.welcome p {
     font-size: 20px;
-  }
+    display: block !important;
+}
 
 #logo {
     animation: fill 0.7s ease forwards 3s;
