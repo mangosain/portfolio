@@ -55,12 +55,12 @@
 }
 .portfolio-overlay .portfolio-content {
     position: absolute;
-    bottom: 60%;
+    bottom: 50%;
     left: 0;
     width: 100%;
     text-align: center;
     opacity: 0;
-    padding: 0 30px;
+    padding: 0 35px;
 }
 .portfolio-content h4 {
     color: #000;
@@ -107,15 +107,14 @@
     }
 }
 @media screen and (max-width: 991px) {
-    .portfolio-content > a {
+    .portfolio-content h4 {
         margin-bottom: 10px;
     }
-    .portfolio-content h4 {
-        font-size: 10px;
-        margin-bottom: 4px;
-    }
     .portfolio-content p {
-        font-size: 5px;
+        font-size: 15px;
+    }
+    .portfolio-content > a {
+        margin-bottom: 10px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -128,7 +127,11 @@
 }
 @media screen and (max-width: 575px) {
     .portfolio-content h4 {
-        font-size: 16px;
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+    .portfolio-content p {
+        font-size: 5px;
     }
 }
 .grid .grid-item {
