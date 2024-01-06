@@ -120,7 +120,7 @@
     .portfolio-content p {
         font-size: 8px;
     }
-    button {
+    .portfolio-content .btn {
         font-size: 8px;
     }
 }
