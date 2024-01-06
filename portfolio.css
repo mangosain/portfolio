@@ -105,11 +105,23 @@
     }
 }
 @media screen and (max-width: 767px) {
-    .portfolio-content h4 {
+    /* .portfolio-content h4 {
         font-size: 15px;
     }
     .portfolio-content p {
         font-size: 12px;
+    } */
+    .portfolio-content h4 {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+    .portfolio-content p {
+        font-size: 10px;
+        margin-bottom: -4px;
+    }
+    .portfolio-content .btn {
+        font-size: 8px;
+        padding: 3px 7px;
     }
 }
 @media screen and (max-width: 575px) {
