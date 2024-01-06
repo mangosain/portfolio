@@ -116,6 +116,13 @@
     .portfolio-content > a {
         margin-bottom: 10px;
     }
+    .portfolio-content h4 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .portfolio-content p {
+        font-size: 10px;
+    }
 }
 @media screen and (max-width: 767px) {
     .portfolio-content h4 {
