@@ -55,12 +55,12 @@
 }
 .portfolio-overlay .portfolio-content {
     position: absolute;
-    bottom: 50%;
+    bottom: 60%;
     left: 0;
     width: 100%;
     text-align: center;
     opacity: 0;
-    padding: 0 35px;
+    padding: 0 30px;
 }
 .portfolio-content h4 {
     color: #000;
