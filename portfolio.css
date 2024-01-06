@@ -114,14 +114,16 @@
 }
 @media screen and (max-width: 575px) {
     .portfolio-content h4 {
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 4px;
     }
     .portfolio-content p {
-        font-size: 8px;
+        font-size: 14px;
+        margin-bottom: 0px;
     }
     .portfolio-content .btn {
-        font-size: 8px;
+        font-size: 10px;
+        padding: 5px 10px;
     }
 }
 .grid .grid-item {
@@ -241,4 +243,8 @@
         bottom: 10px;
         left: 10px;
     }
+}
+
+.portfolio-content .btn i {
+    margin-left: 5px;
 }
