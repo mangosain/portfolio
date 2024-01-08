@@ -75,7 +75,12 @@ canvas {
     height: 400px;
     margin: 25px auto 0px auto;
   }
+
+  .scroll-bar-wrapper {
+    margin-top: 63px;
+  }
 }
+
 .section-title {
   color: rgba(255, 255, 255, 0.5);
 }
