@@ -60,7 +60,7 @@ canvas {
   height: 500px;
 }
 
-@media (max-width: 832px) {
+@media (max-width: 768px) {
   .overflow-sm-hidden {
     overflow-x: hidden;
   }
