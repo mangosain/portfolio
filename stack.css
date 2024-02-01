@@ -1,3 +1,8 @@
 #stack i  {
-    font-size: 100px;
+    font-size: 110px;
+}
+
+#stack p {
+    font-size: 16px;
+    font-weight: 600;
 }
