@@ -43,7 +43,7 @@
     color: #fff;
   }
   
-  .contact .php-email-form {
+  .contact .email-form {
     width: 100%;
     border-bottom: 3px solid #0275d8;
     padding: 30px;
@@ -52,28 +52,28 @@
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   }
   
-  .contact .php-email-form .form-group {
+  .contact .email-form .form-group {
     padding-bottom: 8px;
   }
   
   
-  .contact .php-email-form input,
-  .contact .php-email-form textarea {
+  .contact .email-form input,
+  .contact .email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
     background-color: transparent;
   }
   
-  .contact .php-email-form input {
+  .contact .email-form input {
     height: 44px;
   }
   
-  .contact .php-email-form textarea {
+  .contact .email-form textarea {
     padding: 10px 12px;
   }
   
-  .contact .php-email-form button[type=submit] {
+  .contact .email-form button[type=submit] {
     background: #0275d8;
     border: 0;
     padding: 10px 24px;
