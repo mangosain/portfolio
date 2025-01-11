@@ -1,10 +1,10 @@
 var canvas = document.createElement("canvas");
-var width = canvas.width = window.innerWidth * 0.75;
-var height = canvas.height = window.innerHeight * 0.75;
+var width = (canvas.width = window.innerWidth * 0.75);
+var height = (canvas.height = window.innerHeight * 0.75);
 document.body.appendChild(canvas);
-var gl = canvas.getContext('webgl');
+var gl = canvas.getContext("webgl");
 
-var mouse = {x: 0, y: 0};
+var mouse = { x: 0, y: 0 };
 
 var numMetaballs = 25;
 var metaballs = [];
@@ -16,7 +16,7 @@ for (var i = 0; i < numMetaballs; i++) {
     y: Math.random() * (height - 2 * radius) + radius,
     vx: (Math.random() - 0.5) * 3,
     vy: (Math.random() - 0.5) * 3,
-    r: radius * 0.75
+    r: radius * 0.75,
   });
 }
 
@@ -30,20 +30,29 @@ gl_Position = vec4(position, 0.0, 1.0);
 }
 `;
 
-var fragmentShaderSrc = `
+var fragmentShaderSrc =
+  `
 precision highp float;
 
-const float WIDTH = ` + (width >> 0) + `.0;
-const float HEIGHT = ` + (height >> 0) + `.0;
+const float WIDTH = ` +
+  (width >> 0) +
+  `.0;
+const float HEIGHT = ` +
+  (height >> 0) +
+  `.0;
 
-uniform vec3 metaballs[` + numMetaballs + `];
+uniform vec3 metaballs[` +
+  numMetaballs +
+  `];
 
 void main(){
 float x = gl_FragCoord.x;
 float y = gl_FragCoord.y;
 
 float sum = 0.0;
-for (int i = 0; i < ` + numMetaballs + `; i++) {
+for (int i = 0; i < ` +
+  numMetaballs +
+  `; i++) {
 vec3 metaball = metaballs[i];
 float dx = metaball.x - x;
 float dy = metaball.y - y;
@@ -72,26 +81,24 @@ gl.linkProgram(program);
 gl.useProgram(program);
 
 var vertexData = new Float32Array([
-  -1.0,  1.0, // top left
-  -1.0, -1.0, // bottom left
-  1.0,  1.0, // top right
-  1.0, -1.0, // bottom right
+  -1.0,
+  1.0, // top left
+  -1.0,
+  -1.0, // bottom left
+  1.0,
+  1.0, // top right
+  1.0,
+  -1.0, // bottom right
 ]);
 var vertexDataBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexDataBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW);
 
-var positionHandle = getAttribLocation(program, 'position');
+var positionHandle = getAttribLocation(program, "position");
 gl.enableVertexAttribArray(positionHandle);
-gl.vertexAttribPointer(positionHandle,
-  2, 
-  gl.FLOAT, 
-  gl.FALSE, 
-  2 * 4, 
-  0 
-);
+gl.vertexAttribPointer(positionHandle, 2, gl.FLOAT, gl.FALSE, 2 * 4, 0);
 
-var metaballsHandle = getUniformLocation(program, 'metaballs');
+var metaballsHandle = getUniformLocation(program, "metaballs");
 
 loop();
 function loop() {
@@ -100,8 +107,10 @@ function loop() {
     metaball.x += metaball.vx;
     metaball.y += metaball.vy;
 
-    if (metaball.x < metaball.r || metaball.x > width - metaball.r) metaball.vx *= -1;
-    if (metaball.y < metaball.r || metaball.y > height - metaball.r) metaball.vy *= -1;
+    if (metaball.x < metaball.r || metaball.x > width - metaball.r)
+      metaball.vx *= -1;
+    if (metaball.y < metaball.r || metaball.y > height - metaball.r)
+      metaball.vy *= -1;
   }
 
   var dataToSendToGPU = new Float32Array(3 * numMetaballs);
@@ -113,7 +122,7 @@ function loop() {
     dataToSendToGPU[baseIndex + 2] = mb.r;
   }
   gl.uniform3fv(metaballsHandle, dataToSendToGPU);
-  
+
   //Draw
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
@@ -135,7 +144,7 @@ function compileShader(shaderSource, shaderType) {
 function getUniformLocation(program, name) {
   var uniformLocation = gl.getUniformLocation(program, name);
   if (uniformLocation === -1) {
-    throw 'Can not find uniform ' + name + '.';
+    throw "Can not find uniform " + name + ".";
   }
   return uniformLocation;
 }
@@ -143,43 +152,44 @@ function getUniformLocation(program, name) {
 function getAttribLocation(program, name) {
   var attributeLocation = gl.getAttribLocation(program, name);
   if (attributeLocation === -1) {
-    throw 'Can not find attribute ' + name + '.';
+    throw "Can not find attribute " + name + ".";
   }
   return attributeLocation;
 }
 
-canvas.onmousemove = function(e) {
+canvas.onmousemove = function (e) {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
-}
-
+};
 
 // Function to fetch a random quote
 function fetchRandomQuote() {
-  fetch('https://api.quotable.io/random')
-      .then(response => response.json())
-      .then(data => {
-          // Extract the quote and author from the API response
-          const quote = data.content;
-          const author = data.author;
+  fetch("https://api.quotable.io/random")
+    .then((response) => response.json())
+    .then((data) => {
+      // Extract the quote and author from the API response
+      const quote = data.content;
+      const author = data.author;
 
-          // Display the quote and author in the HTML
-          document.getElementById('quoteText').textContent = `"${quote}"`;
-          document.getElementById('authorText').textContent = `- ${author}`;
-      })
-      .catch(error => console.error('Error fetching quote:', error));
+      // Display the quote and author in the HTML
+      document.getElementById("quoteText").textContent = `"${quote}"`;
+      document.getElementById("authorText").textContent = `- ${author}`;
+    })
+    .catch((error) => console.error("Error fetching quote:", error));
 }
 
 // Fetch a random quote when the page loads
 fetchRandomQuote();
 
-$(function(){
-  $(".filtering").on("click", "span", function () {
+function fetchRandomQuote() {
+  $(function () {
+    $(".filtering").on("click", "span", function () {
       var a = $(".gallery").isotope({});
       var e = $(this).attr("data-filter");
       a.isotope({ filter: e });
-  });
-  $(".filtering").on("click", "span", function () {
+    });
+    $(".filtering").on("click", "span", function () {
       $(this).addClass("active").siblings().removeClass("active");
+    });
   });
-}) 
+}
