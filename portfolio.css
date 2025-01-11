@@ -25,7 +25,7 @@
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  border-radius: 10px;
 }
 .portfolio-wrapper {
   position: relative;
@@ -44,7 +44,6 @@
 @media screen and (max-width: 1199px) {
   .portfolio-image {
     height: 200px;
-    width: 260px;
     background-position-x: -80px;
   }
 }
