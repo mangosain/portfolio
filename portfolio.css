@@ -22,9 +22,10 @@
 
 .portfolio-image {
   height: 300px;
-  width: 300px;
+  width: 100%;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .portfolio-wrapper {
   position: relative;
@@ -52,7 +53,6 @@
   transform: scale(1.2);
   will-change: transform;
   transition: all 0.5s ease;
-  width: 100%;
 }
 .portfolio-wrapper:hover .portfolio-image img {
   transform: none;
